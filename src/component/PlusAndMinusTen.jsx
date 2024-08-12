@@ -1,13 +1,13 @@
 
 
 
-const PlusAndMinusTen=({add,sub})=>{
+const PlusAndMinusTen=({add,sub,counter})=>{
 
 
     return(
         <div className="PlusMinusTen">
             <button onClick={add}>Plus 10</button>
-            <button onClick={sub}>Minus 10</button>
+            <button  onClick={sub} disabled={counter===9}>Minus 10</button>
         </div>
     )
 }

@@ -21,6 +21,9 @@ const Counter=()=>{
             // }
         }
         let decreement=()=>{
+            // if(counter===0){
+            //     return
+            // }
             setCounter(counter-1)
             // if(counter==1){
             //     // setTextValue("Add Atleast 1 item")
@@ -36,7 +39,11 @@ const Counter=()=>{
             setCounter(counter+10)
         }
         let subtractTen=()=>{
+            if(counter<10){
+                return
+            }
             setCounter(counter-10);
+            
         }
 
     return(
@@ -44,9 +51,9 @@ const Counter=()=>{
         <div className="counter">
             <button onClick={increement} ><FontAwesomeIcon icon={faPlus} /></button>
             <h1>{counter} {textValue}</h1>
-            <button onClick={decreement}  ><FontAwesomeIcon className="min" icon={faMinus}/></button>
+            <button onClick={decreement} disabled={counter===0}  ><FontAwesomeIcon className="min" icon={faMinus}/></button>
         </div>
-        <PlusAndMinusTen add={addTen} sub={subtractTen}/>
+        <PlusAndMinusTen counter={counter} add={addTen} sub={subtractTen}/>
         <ResetCounter resetCounter={resetCounter}/>
         </>
     )
