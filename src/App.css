@@ -12,21 +12,21 @@ body{
     width: 100%;
     background-color: rgb(13, 213, 248);
 }
-.counter-container{
+/* .counter-container{
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+   
    
     width: 100%;
-}
+} */
 
- h1,.headding{
+ h1{
     color: white;
-    font-size: 5rem;
-    font-weight: 900;
+    font-size: 4rem;
+    font-weight: 700;
 }
 .counter{
     /* border: 2px solid red; */
@@ -59,4 +59,22 @@ body{
     padding: 5px 20px;
     border-radius: 10px;
 
+}
+
+.PlusMinusTen{
+   
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    button{
+        padding: 10px 20px;
+        font-size:1.1rem ;
+        font-weight: 600;
+        color: white;
+        background-color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
